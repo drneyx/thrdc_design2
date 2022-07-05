@@ -891,27 +891,38 @@ section {
 }
 .about-us .content h4 {
   font-weight: 500;
-  line-height: 32px;
+  line-height: 1rem;
   font-size: 20px;
   color: #d04b28;
 }
 .about-us .content p{
   font-weight: 500;
-  line-height: 32px;
+  line-height: 1.5rem;
   font-size: 14px;
   text-align: left;
   text-justify: left;
 }
 .about-us .content span{
   font-weight: 500;
-  line-height: 32px;
+  line-height: 1.5rem;
   font-size: 10px;
   color: #d04b28;
 }
-
+.icon-img{
+  height: 50px;
+  width: 50px;
+}
+.about-text{
+  font-weight: 500;
+  line-height: 3px;
+  font-size: 12px !important; 
+  text-align: left;
+  text-justify: left;
+ 
+}
 .about-us .content span i{
   font-weight: 500;
-  line-height: 32px;
+  line-height: 3px;
   font-size: 10px;
   color: #d04b28;
   margin-top:2px;
