@@ -585,7 +585,7 @@ section {
 --------------------------------------------------------------*/
 .services .icon-box {
   text-align: center;
-  padding: 70px 20px 80px 20px;
+  padding: 5rem 3rem 6rem ;
   transition: all ease-in-out 0.3s;
   background: #fff;
 }
@@ -609,6 +609,20 @@ section {
   top: 0;
   left: 0;
 }
+.img-fluid{
+  border-radius:20px;
+}
+.video-date{
+  font-weight: 600;
+  font-size: 12px;
+  color:rgba(208, 75, 40, 1);
+  margin-top: 0.5rem;
+}
+.video-title{
+  font-size: 12px;
+  color:black;
+  font-weight: bold;
+}
 .services .icon-box .icon svg path {
   transition: 0.5s;
   fill: #f5f5f5;
@@ -616,11 +630,12 @@ section {
 .services .icon-box h4 {
   font-weight: 600;
   margin: 10px 0 15px 0;
-  font-size: 22px;
+  font-size: 12px;
 }
 .services .icon-box h4 a {
   color: #111;
   transition: ease-in-out 0.3s;
+  font-size: 12px;
 }
 .services .icon-box p {
   line-height: 24px;
@@ -872,7 +887,36 @@ section {
   font-weight: 500;
   line-height: 32px;
   font-size: 24px;
+  color: #d04b28;
 }
+.about-us .content h4 {
+  font-weight: 500;
+  line-height: 32px;
+  font-size: 20px;
+  color: #d04b28;
+}
+.about-us .content p{
+  font-weight: 500;
+  line-height: 32px;
+  font-size: 14px;
+  text-align: left;
+  text-justify: left;
+}
+.about-us .content span{
+  font-weight: 500;
+  line-height: 32px;
+  font-size: 10px;
+  color: #d04b28;
+}
+
+.about-us .content span i{
+  font-weight: 500;
+  line-height: 32px;
+  font-size: 10px;
+  color: #d04b28;
+  margin-top:2px;
+}
+
 .about-us .content ul {
   list-style: none;
   padding: 0;
@@ -891,7 +935,9 @@ section {
 .about-us .content p:last-child {
   margin-bottom: 0;
 }
-
+.video{
+  border-radius: 30px;
+}
 /*--------------------------------------------------------------
 # Our Team
 --------------------------------------------------------------*/
