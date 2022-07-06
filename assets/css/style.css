@@ -666,6 +666,12 @@ section {
   border-radius:2rem;
   width: 100%;
 }
+
+.img-word{
+  border-radius:2rem;
+  width: 100%;
+  /* padding: auto; */
+}
 .news-date-big{
   font-weight: 600;
   font-size: 13px;
