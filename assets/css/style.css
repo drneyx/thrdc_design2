@@ -383,7 +383,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero .carousel-content {
   color: #fff;
   text-align: center;
-  background: linear-gradient(to bottom, rgba(225, 218, 218, 0), rgba(208, 75, 40, 1));
+  background: linear-gradient(to bottom, rgba(225, 218, 218, 0), rgb(249, 55, 6));
   /* height: 30%; */
   padding: 2rem 1rem;
 }
@@ -1466,8 +1466,8 @@ section {
 .googlemap-bg{
   background: 
   linear-gradient(
-    rgba(208, 75, 40, 0.8), 
-    rgba(208, 75, 40, 0.8)
+    rgba(89, 19, 16, 0.8), 
+    rgba(89, 19, 16, 0.8)
   ),
   url(../img/portfolio/ubalozi.websp);
   background-repeat:no-repeat;
@@ -1476,10 +1476,21 @@ section {
   overflow: hidden;
   width: 20%;
   margin-left: 5rem;
-  margin-top: -25%;
-  position: relative;
+  /* margin-top: -25%;
+  position: relative; */
  ;
   /* margin-bottom: 50px; */
+}
+
+#wrapper { 
+  position: relative; 
+}
+#over_map {
+   position: absolute; 
+   top: 0; 
+   left: 10px;
+   bottom: 0;
+   z-index: 99; 
 }
 .googlemap-title h2 {
   font-size: 32px;
