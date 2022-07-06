@@ -1448,6 +1448,91 @@ section {
   padding: 0;
 }
 
+
+
+/* Google map */
+/* Subscribe channel */
+.googlemap .googlemap-carousel, .googlemap .googlemap-slider {
+  overflow: hidden;
+}
+
+#googlemap {
+  height: 10%;
+  width: 100%;
+  
+  /* Set z-index to 0 as it will be on a layer below the contact form */
+}
+
+.googlemap-bg{
+  background: 
+  linear-gradient(
+    rgba(208, 75, 40, 0.8), 
+    rgba(208, 75, 40, 0.8)
+  ),
+  url(../img/portfolio/ubalozi.websp);
+  background-repeat:no-repeat;
+  background-position: top;
+  background-size: 100% auto; 
+  overflow: hidden;
+  width: 20%;
+  margin-left: 5rem;
+  margin-top: -25%;
+  position: relative;
+ ;
+  /* margin-bottom: 50px; */
+}
+.googlemap-title h2 {
+  font-size: 32px;
+  font-weight: 500;
+  text-transform: capitalize;
+  position: relative;
+  color: #FFF;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.googlemap-title h2:before {
+  content: "";
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 2px;
+  background: #FFF;
+  bottom: 0;
+  left: calc(50% - 25px);
+  margin-bottom: 0.7rem;
+  text-align: center;
+}
+
+.googlemap-title p {
+  margin-bottom: 0;
+  text-align: center;
+  align-items: center;
+  color: #fff;
+}
+
+.googlemap .googlemap-item {
+  box-sizing: content-box;
+  padding: 40px;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
+  position: relative;
+  background: #fff;
+}
+.googlemap .googlemap-item .googlemap-img {
+  width: 90px;
+  border-radius: 50px;
+  border: 6px solid #fff;
+  float: left;
+  margin: 0 10px 0 0;
+}
+.googlemap .googlemap-item h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0 5px 0;
+  color: #111;
+}
+
+
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
@@ -2005,7 +2090,8 @@ section {
 #footer .footer-top {
   padding: 60px 0 30px 0;
   background: #7B201C;
-  background-image:url(https://maps.google.co.in/maps?q=new+Delhi&hl=en&sll=28.572047,77.069178&sspn=0.02348,0.039482&hnear=Delhi&t=m&z=10)
+  /* width: 40%; */
+  
 }
 #footer .footer-top .footer-contact {
   margin-bottom: 30px;
