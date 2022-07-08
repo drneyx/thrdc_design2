@@ -19,7 +19,7 @@ a {
 }
 
 a:hover {
-  color: #2ae149;
+  color: #d04b28;
   text-decoration: none;
 }
 
@@ -49,7 +49,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 0;
 }
 .back-to-top:hover {
-  background: #21df41;
+  background: #d04b28;
   color: #fff;
 }
 .back-to-top.active {
@@ -170,7 +170,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 1rem 0 1rem 2rem;
   /* font-family: "Roboto", sans-serif; */
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 600;
   color: #4d4643;
   white-space: nowrap;
   text-transform: capitalize !important;
@@ -216,7 +216,7 @@ h1, h2, h3, h4, h5, h6 {
 .navbar .dropdown ul a {
   padding: 10px 20px;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: none;
   color: #111;
 }
@@ -282,6 +282,7 @@ h1, h2, h3, h4, h5, h6 {
     justify-content:center;
 
   }
+
 }
 .navbar-mobile {
   position: fixed;
@@ -534,8 +535,17 @@ section {
   border-radius: 0;
   border-color: #d04b28;
   /* width: 50%; */
-
- 
+}
+.card-footer{
+  width: 80%;
+  color: #fff;
+  font-size: 14px;
+  background: #591310;
+}
+.visitor-count{
+  color: #fff;
+  font-size: 14px;
+  background: #591310;
 }
 .subscribe-input{
   padding: 0.6rem 3rem;
@@ -1233,7 +1243,7 @@ section {
   transition: 0.3s;
 }
 .pricing .btn-buy:hover {
-  background: #2ae149;
+  background: #d04b28;
 }
 .pricing .featured h3 {
   color: #fff;
@@ -1480,8 +1490,8 @@ section {
   background-position: top;
   background-size: 100% auto; 
   overflow: hidden;
-  width: 20%;
-  margin-left: 5rem;
+  width: 16rem;
+  margin-left: 10%;
   /* margin-top: -25%;
   position: relative; */
  ;
@@ -1660,7 +1670,7 @@ section {
   border-radius: 4px;
 }
 .contact .php-email-form button[type=submit]:hover {
-  background: #2ae149;
+  background: #d04b28;
 }
 @-webkit-keyframes animate-loading {
   0% {
@@ -2209,7 +2219,7 @@ section {
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
 #footer .footer-newsletter form input[type=submit]:hover {
-  background: #2ae149;
+  background: #d04b28;
 }
 #footer .credits {
   padding-top: 5px;
