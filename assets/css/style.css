@@ -74,6 +74,7 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 997;
   padding: 1rem 0;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 #header .logo {
   font-size: 28px;
@@ -597,7 +598,8 @@ section {
   padding: 15px 0;
   background: #d04b28;
   min-height: 40px;
-  margin-top: 72px;
+  /* margin-top: 172px; */
+  /* position: absolute; */
 }
 .breadcrumbs h2 {
   font-size: 26px;
