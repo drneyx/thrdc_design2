@@ -1472,6 +1472,18 @@ section {
 }
 
 
+/* Members */
+.members-table{
+  border-width: 3px solid #d04b28 !important;
+  border-left-width: 1px solid #dee2e6 !important;
+
+}
+.members-head{
+ background-color: #d04b28;
+ color: #fff !important;
+
+}
+
 
 /* Google map */
 /* Subscribe channel */
