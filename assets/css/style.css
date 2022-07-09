@@ -1037,6 +1037,28 @@ section {
 .video{
   border-radius: 30px;
 }
+
+
+.organization-background img{
+  text-align: center;
+  align-self: center;
+  justify-content: center;
+}
+.organization-background h4{
+  font-weight: 500;
+  line-height: 1rem;
+  font-size: 20px;
+  color: #d04b28;
+
+}
+
+.organization-background p{
+  font-weight: 500;
+  line-height: 1.5rem;
+  font-size: 14px;
+  text-align: left;
+  text-justify: left;
+}
 /*--------------------------------------------------------------
 # Our Team
 --------------------------------------------------------------*/
