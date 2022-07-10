@@ -839,7 +839,7 @@ section {
 }
 .portfolio .portfolio-item .portfolio-info p {
   color: #444444;
-  font-size: 14px;
+  font-size: 12px;
   margin-bottom: 0;
 }
 .portfolio .portfolio-item .portfolio-info .preview-link, .portfolio .portfolio-item .portfolio-info .details-link {
@@ -878,6 +878,7 @@ section {
   opacity: 1;
   bottom: 20px;
 }
+
 
 /*--------------------------------------------------------------
 # Portfolio Details
@@ -932,7 +933,9 @@ section {
 .portfolio-details .portfolio-description p {
   padding: 0;
 }
-
+.program-text{
+  font-size: 12px;
+}
 /*--------------------------------------------------------------
 # Clients
 --------------------------------------------------------------*/
