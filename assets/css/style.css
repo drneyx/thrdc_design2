@@ -1157,6 +1157,11 @@ section {
   padding: 15px 15px;
   background-color: #ab8d73;
 }
+
+.report .members .online-centre-info {
+  padding: 15px 15px;
+  background-color: black;
+}
 .report .members .members-info h4 {
   font-weight: 700;
   margin-bottom: 5px;
@@ -1164,6 +1169,13 @@ section {
   color: #111;
 }
 .report .members .members-info span {
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.report .members .online-centre-info span {
   display: block;
   font-size: 13px;
   font-weight: 400;
