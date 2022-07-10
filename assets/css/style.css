@@ -504,6 +504,163 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+
+
+/*--------------------------------------------------------------
+# Event Section
+--------------------------------------------------------------*/
+#event-area {
+  width: 100%;
+  height: 65vh;
+  /* background-color: rgba(0, 0, 0, 0.8); */
+  /* overflow: hidden; */
+  overflow-x: hidden;
+  border-right: 2px solid #d04b28;
+  border-left: 2px solid #d04b28;
+  border-top: 2px solid #d04b28;
+  border-bottom: 2px solid #d04b28;
+  /* background-image: url(assets/img/slide/slide-1.jpg); */
+
+  /* position: absolute; */
+
+}
+#event-area .events, #event-area .events-inner, #event-area .events-item, #event-area .events-item::before {
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  
+}
+#event-area .events-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  background-color: #18d26e; 
+}
+#event-area .events-content {
+  color: #fff;
+  text-align: center;
+  background: linear-gradient(to bottom, rgba(225, 218, 218, 0), rgb(249, 55, 6));
+  /* height: 0%; */
+  padding: 2rem 1rem;
+}
+#event-area .events-content h2 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 700;
+}
+#event-area .btn-get-started {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 32px;
+  border-radius: 4px;
+  transition: 0.5s;
+  line-height: 1;
+  margin: 10px;
+  color: #fff;
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+  border: 2px solid #d04b28;
+}
+#event-area .btn-get-started:hover {
+  background: #d04b28;
+  color: #fff;
+  text-decoration: none;
+}
+#event-area .events-inner .events-item {
+  transition-property: opacity;
+  background-position: center top;
+}
+#event-area .events-inner .events-item,
+#event-area .events-inner .active.events-item-start,
+#event-area .events-inner .active.events-item-end {
+  opacity: 0;
+}
+#event-area .events-inner .active,
+#event-area .events-inner .events-item-next.events-item-start,
+#event-area .events-inner .events-item-prev.events-item-end {
+  opacity: 1;
+  transition: 0.5s;
+}
+#event-area .events-inner .events-item-next,
+#event-area .events-inner .events-item-prev,
+#event-area .events-inner .active.events-item-start,
+#event-area .events-inner .active.events-item-end {
+  left: 0;
+  transform: translate3d(0, 0, 0);
+}
+#event-area .events-control-next-icon, #event .events-control-prev-icon {
+  background: none;
+  font-size: 30px;
+  line-height: 0;
+  width: auto;
+  height: auto;
+  background: #d04b28;
+  border-radius: 50px;
+  transition: 0.3s;
+  color: rgba(255, 255, 255, 0.6);
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#event-area .events-control-next-icon:hover, #event .events-control-prev-icon:hover {
+  background: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.8);
+}
+#event-area .events-indicators li {
+  cursor: pointer;
+  background: #fff;
+  overflow: hidden;
+  border: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50px;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+#event-area .events-indicators li.active {
+  opacity: 1;
+  background: #d04b28;
+}
+@media (min-width: 1024px) {
+  #event-area .events-content {
+    width: 100%;
+  }
+  #event-area .events-control-prev, #event .events-control-next {
+    width: 5%;
+  }
+}
+@media (max-width: 992px) {
+  #event-area .events-container {
+    top: 58px;
+  }
+  #event-area .events-content h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+  }
+  #event-area .events-content p {
+    font-size: 15px;
+  }
+}
+@media (max-height: 500px) {
+  #event-area {
+    height: 60vh;
+  }
+}
+
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
@@ -1008,6 +1165,11 @@ section {
   height: 50px;
   width: 50px;
 }
+
+.icon-img-award{
+  height: 70px;
+  width: 70px;
+}
 .about-text{
   font-weight: 500;
   line-height: 3px;
@@ -1066,6 +1228,34 @@ section {
   font-size: 14px;
   text-align: left;
   text-justify: left;
+}
+
+
+
+.award img{
+  text-align: center;
+  align-self: center;
+  justify-content: center;
+}
+.award h4{
+  font-weight: 500;
+  line-height: 1rem;
+  font-size: 20px;
+  color: #591310;
+
+}
+
+.award p{
+  font-weight: 500;
+  line-height: 1.5rem;
+  font-size: 14px;
+  text-align: left;
+  text-justify: left;
+}
+
+.award-img{
+  width: 100%;
+  height: 500px;
 }
 /*--------------------------------------------------------------
 # Our Team
