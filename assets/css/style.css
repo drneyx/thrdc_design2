@@ -841,6 +841,12 @@ section {
   max-width: 100%;
   height: auto;
 }
+
+.img-fluid-news{
+  border-radius:0;
+  max-width: 100%;
+  height: auto;
+}
 .img-fluid-big{
   border-radius:2rem;
   width: 100%;
@@ -1381,6 +1387,95 @@ section {
   font-size: 14px;
   line-height: 26px;
   color: #847872;
+}
+
+
+/* Opportunities */
+.news .carriers {
+  margin-bottom: 20px;
+  overflow: hidden;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+.news .carriers .carriers-img {
+  position: relative;
+  overflow: hidden;
+ 
+}
+
+.news .carriers .carriers-title {
+  position: absolute;
+  top: 4rem; 
+  left: 0;
+  z-index: 99; 
+  width: auto;
+  background-color: #591310;
+  padding: 0.2rem  3rem
+}
+
+.news .carriers .carriers-title  h4{
+  font-weight: 400;
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+  
+}
+
+.news .carriers .carriers-title  p{
+  font-weight: 400;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+ 
+}
+
+
+.news .carriers .carriers-info {
+  padding: 15px 15px;
+  background-color: #a26733;
+}
+
+.news .carriers .carriers-info {
+  padding: 15px 15px;
+  background-color: #edc1b6;
+}
+.news .carriers .carriers-info h4 {
+  font-weight: 400;
+  margin-bottom: 5px;
+  font-size: 18px;
+  color: #d04b28;
+  text-align: start;
+}
+.news .carriers .carriers-info p {
+  display: block;
+  font-size: 11px;
+  font-weight: 400;
+  color: #847872;
+  text-align: start;
+}
+.news .carriers .carriers-info  button{
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 3rem;
+  transition: 0.5s;
+  line-height: 1;
+  margin-top: 2rem;
+  color: #fff;
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+  background: #d04b28;
+}
+
+.news .carriers .online-centre-info span {
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+  color: #fff;
 }
 
 /*--------------------------------------------------------------
