@@ -700,6 +700,37 @@ section {
   /* width: 50%; */
 }
 
+
+.card-header-twitter{
+  background-color: #00acee;
+  color: #fff;
+}
+
+.twitter-icon{
+  padding: 0.5rem;
+ 
+}
+.card-header-facebook{
+  background-color: #4267B2;
+  color: #fff
+}
+
+.facebook-icon{
+  padding: 0.5rem;
+ 
+}
+
+.card-header-instagram{
+  background: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf);
+  color: #fff;
+  
+}
+
+.instragram-icon{
+  padding: 0.5rem;
+ 
+}
+
 .no-frame-scroll {
   overflow-x: hidden;
   overflow-y: auto;
