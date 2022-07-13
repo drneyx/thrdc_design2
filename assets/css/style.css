@@ -699,6 +699,11 @@ section {
   border-color: #d04b28;
   /* width: 50%; */
 }
+
+.no-frame-scroll {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
 .card-footer{
   width: 80%;
   color: #fff;
@@ -841,7 +846,9 @@ section {
   max-width: 100%;
   height: auto;
 }
-
+.sec-3-card-body {
+  max-height: 60vh;
+}
 .img-fluid-news{
   border-radius:0;
   max-width: 100%;
