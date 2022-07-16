@@ -1361,6 +1361,15 @@ section {
 
 
 
+#award{
+  background: url('../../assets/img/slide/slide-1.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  height: 70vh;
+    /* background-color: #00acee; */
+}
+
 .award img{
   text-align: center;
   align-self: center;
