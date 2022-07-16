@@ -740,11 +740,12 @@ section {
   overflow-x: hidden;
   overflow-y: auto;
 }
+
 .card-footer{
   width: 80%;
   color: #fff;
   font-size: 14px;
-  background: #591310;
+  border: 1px solid #fff
 }
 .visitor-count{
   color: #fff;
