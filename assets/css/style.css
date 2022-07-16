@@ -686,7 +686,7 @@ section {
   ),
   url(../img/portfolio/ubalozi.webp);
   background-repeat:no-repeat;
-  background-position: top;
+  background-position: center;
   background-size: 100% auto; 
   padding: 60px 0;
   overflow: hidden;
@@ -740,11 +740,12 @@ section {
   overflow-x: hidden;
   overflow-y: auto;
 }
+
 .card-footer{
   width: 80%;
   color: #fff;
   font-size: 14px;
-  background: #591310;
+  border: 1px solid #fff
 }
 .visitor-count{
   color: #fff;
@@ -1361,6 +1362,15 @@ section {
 
 
 
+#award{
+  background: url('../../assets/img/slide/slide-1.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  height: 70vh;
+    /* background-color: #00acee; */
+}
+
 .award img{
   text-align: center;
   align-self: center;
@@ -1578,7 +1588,7 @@ section {
   color: #847872;
   text-align: start;
 }
-.news .carriers .carriers-info  button{
+.news .carriers .carriers-info a{
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 14px;

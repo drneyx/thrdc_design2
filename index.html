@@ -32,7 +32,7 @@
 
 <body>
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top">
+  <header id="header">
      <div class="d-flex justify-content-between top-barner  p-2">
           <div class="top-address mt-3">
             <i class="bu bi-geo-alt"></i> Eyas Road, Near Hekima Garden, P.O BOX 105926, Mikocheni, Dar es Salaam, Tanzania
@@ -63,8 +63,8 @@
       </div>
 
 
-    <div class="container d-flex align-items-center">
-      <nav id="navbar" class="navbar order-last order-lg-0">
+    <div class="container d-flex align-items-center bg-white" >
+      <nav id="navbar" class="navbar order-last  order-lg-0 bg-white">
         <ul>
           <li><a href="index.html" class="active" style="text-decoration-color: #fff;">Home</a></li>
 
@@ -538,23 +538,26 @@
 
       <!-- =======Google map Section ======= -->
       <div id="wrapper">
-        <div id="googleMap" style="width:100%;height:250px"></div>
-        <section id="over_map" class="googlemap googlemap-bg flex-grow-1">
-          <div class="container" data-aos="fade-up">
-            <div class="container text-white">
-                <h3>Head Quarter</h3>
-                <p>
-                  Eyasi Road, <br>
-                  Near Hekima Garden,<br>
-                  Dar es Salaam
-                    <br><br>
-                  <strong>Phone:</strong> +255 769 642 208<br>
-                  <strong>Email:</strong> info@thrdc.or.tz<br>
-                </p>   
-            </div>
+        <div class="googlemap">
+            <iframe style="border:0; width: 100%; height: 300px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
           </div>
-      </section>
-    </div>
+      
+          <section id="over_map" class="googlemap googlemap-bg flex-grow-1">
+            <div class="container" data-aos="fade-up">
+              <div class="container text-white">
+                  <h3>Head Quarter</h3>
+                  <p>
+                    Eyasi Road, <br>
+                    Near Hekima Garden,<br>
+                    Dar es Salaam
+                      <br><br>
+                    <strong>Phone:</strong> +255 769 642 208<br>
+                    <strong>Email:</strong> info@thrdc.or.tz<br>
+                  </p>   
+              </div>
+            </div>
+          </section>
+      </div>
       <!-- End Map Section -->
 
   </main>
@@ -593,25 +596,25 @@
               <h4>Visitor Counter</h4>
             </div>
             <ul class="list-group list-group-flush visitor-count">
-              <li class="list-group-item">
+              <li class="list-group-item visitor-count">
                 <div class="d-flex">
                   <div class="me-auto">Today</div>
                   <div class="">2311</div>
                 </div>
               </li>
-              <li class="list-group-item">
+              <li class="list-group-item visitor-count">
                 <div class="d-flex">
                   <div class="me-auto">Yesterday</div>
                   <div class="">231211</div>
                 </div>
               </li>
-              <li class="list-group-item">
+              <li class="list-group-item visitor-count">
                 <div class="d-flex">
                   <div class="me-auto">All</div>
                   <div class="">2234442311</div>
                 </div>
               </li>
-              <li class="list-group-item">
+              <li class="list-group-item visitor-count">
                 <div class="d-flex">
                   <div class="me-auto">Online</div>
                   <div class="">2311</div>
@@ -620,15 +623,16 @@
             </ul>
           </div>
 
-          <div class="me-md-auto text-center text-md-start">
-            <div class="copyright">
-              &copy; 2022 THRD Coalition. All rights reserved
-            </div>
-          </div>
+         
         </div>
+        
       </div>
-
       
+    </div>
+    <div class="me-md-auto text-center d-flex justify-content-center p-3 text-md-start">
+      <div class="copyright d-flex align-self-center">
+        &copy; 2022 THRD Coalition. All rights reserved
+      </div>
     </div>
   </footer><!-- End Footer -->
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
@@ -644,14 +648,51 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
   <script>
     function myMap() {
-    var mapProp= {
-      center:new google.maps.LatLng(39.2083,6.7924),
-      zoom:5,
-    };
-    var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+        var mapProp= {
+          center:new google.maps.LatLng(39.2083,6.7924),
+          zoom:5,
+        };
+        var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
     }
+
+    /**
+    * Scroll management
+    */
+    $(document).ready(function () {
+
+      // Define the menu we are working with
+      var menu = $('.navbar');
+
+      // Get the menus current offset
+      var origOffsetY = menu.offset().top;
+
+      /**
+      * scroll
+      * Perform our menu mod
+      */
+      function scroll() {
+
+          // Check the menus offset. 
+          if ($(window).scrollTop() >= origOffsetY) {
+
+              //If it is indeed beyond the offset, affix it to the top.
+              $(menu).addClass('fixed-top');
+
+          } else {
+
+              // Otherwise, un affix it.
+              $(menu).removeClass('fixed-top');
+
+          }
+      }
+
+      // Anytime the document is scrolled act on it
+      document.onscroll = scroll;
+
+    });
     </script>
     
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAChJNvE8x9PwAl3-TozmGp1mDCy9anvjI&callback=myMap"></script>
