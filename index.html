@@ -32,7 +32,7 @@
 
 <body>
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top">
+  <header id="header">
      <div class="d-flex justify-content-between top-barner  p-2">
           <div class="top-address mt-3">
             <i class="bu bi-geo-alt"></i> Eyas Road, Near Hekima Garden, P.O BOX 105926, Mikocheni, Dar es Salaam, Tanzania
@@ -63,8 +63,8 @@
       </div>
 
 
-    <div class="container d-flex align-items-center">
-      <nav id="navbar" class="navbar order-last order-lg-0">
+    <div class="container d-flex align-items-center bg-white" >
+      <nav id="navbar" class="navbar order-last  order-lg-0 bg-white">
         <ul>
           <li><a href="index.html" class="active" style="text-decoration-color: #fff;">Home</a></li>
 
@@ -645,14 +645,54 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
   <script>
     function myMap() {
-    var mapProp= {
-      center:new google.maps.LatLng(39.2083,6.7924),
-      zoom:5,
-    };
-    var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+        var mapProp= {
+          center:new google.maps.LatLng(39.2083,6.7924),
+          zoom:5,
+        };
+        var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
     }
+
+    /**
+    * Scroll management
+    */
+    $(document).ready(function () {
+
+      // Define the menu we are working with
+      var menu = $('.navbar');
+
+      // Get the menus current offset
+      var origOffsetY = menu.offset().top;
+
+      /**
+      * scroll
+      * Perform our menu mod
+      */
+      function scroll() {
+
+          // Check the menus offset. 
+          if ($(window).scrollTop() >= origOffsetY) {
+
+              //If it is indeed beyond the offset, affix it to the top.
+              $(menu).addClass('fixed-top');
+
+          } else {
+
+              // Otherwise, un affix it.
+              $(menu).removeClass('fixed-top');
+
+          }
+      }
+
+      // Anytime the document is scrolled act on it
+      document.onscroll = scroll;
+
+    });
+        
+
+        
     </script>
     
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAChJNvE8x9PwAl3-TozmGp1mDCy9anvjI&callback=myMap"></script>
