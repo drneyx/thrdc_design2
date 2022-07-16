@@ -136,6 +136,10 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 1rem;
 
 }
+
+#word{
+  margin-top: 10rem;
+}
 .header-social-links a i {
   line-height: 0;
 }
@@ -509,6 +513,7 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Event Section
 --------------------------------------------------------------*/
+
 #event-area {
   width: 100%;
   height: 65vh;
@@ -796,7 +801,8 @@ section {
   padding: 15px 0;
   background: #d04b28;
   min-height: 40px;
-  /* margin-top: 172px; */
+  top: 0;
+  /* margin-top: 1rem; */
   /* position: absolute; */
 }
 .breadcrumbs h2 {
@@ -837,8 +843,66 @@ section {
   .breadcrumbs ol li {
     display: inline-block;
   }
+  .social-media{
+    display: none;
+  }
 }
 
+
+/* Events  */
+
+#top-event-area{
+  background: url('../../assets/img/slide/slide-1.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  height: 70vh;
+  /* background-color: #00acee; */
+}
+.event-container{
+  background-color: rgba(89, 19, 16, 0.8);
+}
+
+.event-text{
+  color: #fff;
+  font-size: 60px;
+  text-align: center;
+  font-weight: bold;
+}
+.event-details{
+  align-items: center;
+  justify-content: center;
+ 
+}
+
+.event-details h4{
+  font-size: 25px;
+  font-weight: 400;
+  color: #ab8d73;
+  text-align: start;
+}
+
+.event-details p{
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
+  text-align: start;
+}
+
+.event-details h3{
+  font-size: 25px;
+  color: #fff;
+  text-align: start;
+  font-weight: bold;
+}
+
+
+.event-title{
+  font-size: 28px;
+  font-weight: 400;
+  color: rgba(208, 75, 40, 1);
+  text-align: start;
+}
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
@@ -875,6 +939,12 @@ section {
 .img-fluid-members{
   border-radius:0;
   max-width: 100%;
+  height: auto;
+}
+
+.event-img{
+  border-radius:0;
+  width: 90%;
   height: auto;
 }
 .sec-3-card-body {
