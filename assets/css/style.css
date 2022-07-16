@@ -869,6 +869,32 @@ section {
   text-align: center;
   font-weight: bold;
 }
+.event-details{
+  align-items: center;
+  justify-content: center;
+ 
+}
+
+.event-details h4{
+  font-size: 25px;
+  font-weight: 400;
+  color: #ab8d73;
+  text-align: start;
+}
+
+.event-details p{
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
+  text-align: start;
+}
+
+.event-details h3{
+  font-size: 25px;
+  color: #fff;
+  text-align: start;
+  font-weight: bold;
+}
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
