@@ -895,6 +895,14 @@ section {
   text-align: start;
   font-weight: bold;
 }
+
+
+.event-title{
+  font-size: 28px;
+  font-weight: 400;
+  color: rgba(208, 75, 40, 1);
+  text-align: start;
+}
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
@@ -931,6 +939,12 @@ section {
 .img-fluid-members{
   border-radius:0;
   max-width: 100%;
+  height: auto;
+}
+
+.event-img{
+  border-radius:0;
+  width: 90%;
   height: auto;
 }
 .sec-3-card-body {
