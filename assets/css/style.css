@@ -1588,7 +1588,7 @@ section {
   color: #847872;
   text-align: start;
 }
-.news .carriers .carriers-info  button{
+.news .carriers .carriers-info a{
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 14px;
