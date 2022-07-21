@@ -482,6 +482,15 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 1;
   background: #d04b28;
 }
+
+.video-player{
+  position: absolute;
+  /* top: 4rem;
+  left: 6rem;  */
+  padding: 0.2rem 1rem;
+  background-color: red;
+  border-radius: 0.3rem;
+}
 @media (min-width: 1024px) {
   #hero .carousel-content {
     width: 100%;
