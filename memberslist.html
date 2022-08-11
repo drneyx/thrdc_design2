@@ -315,21 +315,6 @@
     }
     
     $(document).ready(function () {
-        $('#datatasble').DataTable();
-
-        var body = {
-          "api_key":"YTc4YWY3ZWVlZWViODU3YTY5ODUzNTA4ZGU3YzVhYzM1NTdjNjM1MWEyYzA1ODU1ZDhlqA12AjkP0qNTc4ZjU3N2QwMDVmMw=="
-        }
-
-       
-       
-    });
-    
-   
-</script>
-<script>
-  $(document).ready(function () {
-     
       var body = {
         "api_key":"YTc4YWY3ZWVlZWViODU3YTY5ODUzNTA4ZGU3YzVhYzM1NTdjNjM1MWEyYzA1ODU1ZDhlqA12AjkP0qNTc4ZjU3N2QwMDVmMw=="
       }
@@ -339,9 +324,7 @@
           data: JSON.stringify(body),
           dataType: "json",
           success: function (response) {
-            
               var res = response.zones;
-              console.log(response);
               $('#datatable').DataTable({
                   data: res,
                   columns: [
@@ -355,7 +338,13 @@
               alert(response.responseText);
           }
       });
-
+    });
+    
+   
+</script>
+<script>
+  $(document).ready(function () {
+     
   });
 </script>
     
