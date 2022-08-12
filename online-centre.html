@@ -142,55 +142,7 @@
         <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
       </div> -->
 
-      <div class="row">
-
-        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-          <div class="members" data-aos="fade-up">
-            <div class="members-img">
-              <img src="assets/img/team/team-1.jpg" class="img-fluid-members" alt="">
-            </div>
-            <div class="online-centre-info" >
-              <span>Download <i class="bi bi-download"></i></span>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-          <div class="members" data-aos="fade-up" data-aos-delay="100">
-            <div class="members-img">
-              <img src="assets/img/team/team-2.jpg" class="img-fluid-members" alt="">
-            </div>
-            <div class="online-centre-info">
-              <a href="board-members-details.html">
-                <span>Download <i class="bi bi-download"></i></span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-          <div class="members" data-aos="fade-up" data-aos-delay="200">
-            <div class="members-img">
-              <img src="assets/img/team/team-3.jpg" class="img-fluid-members" alt="">
-            </div>
-            <div class="online-centre-info">
-                <span>Download <i class="bi bi-download"></i></span>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-          <div class="members" data-aos="fade-up" data-aos-delay="300">
-            <div class="members-img">
-              <img src="assets/img/team/team-4.jpg" class="img-fluid-members" alt="">
-              
-            </div>
-            <div class="online-centre-info">
-                <span>Download <i class="bi bi-download"></i></span>
-            </div>
-          </div>
-        </div>
-
+      <div class="row" id="report-data">
       </div>
 
     </div>
@@ -306,8 +258,51 @@
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    $(document).ready(function () {
+      var body = {
+        "api_key":"YTc4YWY3ZWVlZWViODU3YTY5ODUzNTA4ZGU3YzVhYzM1NTdjNjM1MWEyYzA1ODU1ZDhlqA12AjkP0qNTc4ZjU3N2QwMDVmMw=="
+      }
+      $.ajax({
+          type: "POST",
+          url: "https://thrdc.bluefindigital.co.tz/getaprovedreports.php",
+          data: JSON.stringify(body),
+          dataType: "json",
+          success: function (response) {
+              var res = response.approved_reports;
+              console.log(res);
+              html = "";
+              $.each(res, function(index, value) {
+                  html += '<div class="col-lg-3 col-md-6 d-flex align-items-stretch">\
+                    <div class="members" data-aos="fade-up" data-aos-delay="100">\
+                      <div class="members-img">\
+                        <img src="assets/img/team/team-2.jpg" class="img-fluid-members" alt="">\
+                      </div>\
+                      <div class="online-centre-info">\
+                        <a href="'+ value.report_link + '">\
+                          <span>Download <i class="bi bi-download"></i></span>\
+                        </a>\
+                      </div>\
+                    </div>\
+                  </div>';
+              });
+            
+              $('#report-data').empty('').append(html);
+             
+            
+
+          },
+          error: function (response) {
+              alert(response.responseText);
+          }
+      });
+    });
+    
+  </script>
 
 </body>
 
