@@ -138,44 +138,7 @@
        <section id="about-us" class="about-us section-bg">
         <div class="container" data-aos="fade-up">
   
-          <div class="row">
-             <!-- Render for loop here -->
-            <div class="col-lg-3 col-md-3 d-flex align-items-stretch video" data-aos="zoom-in" data-aos-delay="100">
-              <div class="icon-box iconbox-blue">
-                <a href="event-details.html"><img src="assets/img/portfolio/miaka10aniver.PNG" class="img-fluid" alt=""></a>
-                <p class="video-date">Jan 1, 2020<p>
-                <p class="video-title">Maadhimisho ya Miaka kumi ya kukuza, watetezi wa haki za kibinaadam na nafasi ya kiraia tanzania.</p>
-              </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-3 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
-              <div class="icon-box iconbox-orange ">
-                <a href="blog-single.html"> <img src="assets/img/portfolio/miaka10aniver.PNG" class="img-fluid" alt="">
-                  <p class="video-date">Jan 1, 2020<p>
-                  <p class="video-title">Maadhimisho ya Miaka kumi ya kukuza, watetezi wa haki za kibinaadam na nafasi ya kiraia tanzania.</p>
-               </a>
-              </div>
-            </div>
-  
-            <div class="col-lg-3 col-md-3 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
-              <div class="icon-box iconbox-pink">
-                <a href="blog-sin.html">
-                  <img src="assets/img/portfolio/miaka10aniver.PNG" class="img-fluid" alt="">
-                    <p class="video-date">Jan 1, 2020<p>
-                    <p class="video-title">Maadhimisho ya Miaka kumi ya kukuza, watetezi wa haki za kibinaadam na nafasi ya kiraia tanzania.</p>
-                </a>
-              </div>
-            </div>
-  
-            <div class="col-lg-3 col-md-3 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="100">
-              <div class="icon-box iconbox-yellow">
-                <a href="blog-single.html">
-                  <img src="assets/img/portfolio/miaka10aniver.PNG" class="img-fluid" alt="">
-                    <p class="video-date">Jan 1, 2020<p>
-                    <p class="video-title">Maadhimisho ya Miaka kumi ya kukuza, watetezi wa haki za kibinaadam na nafasi ya kiraia tanzania.</p>
-                </a>
-              </div>
-            </div>
+          <div class="row" id="events-data">
           </div>
           <!-- Video section -->
       </section><!-- End Video and About Us Section -->
@@ -319,8 +282,45 @@
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    $(document).ready(function () {
+      var body = {
+        "api_key":"YTc4YWY3ZWVlZWViODU3YTY5ODUzNTA4ZGU3YzVhYzM1NTdjNjM1MWEyYzA1ODU1ZDhlqA12AjkP0qNTc4ZjU3N2QwMDVmMw=="
+      }
+      $.ajax({
+          type: "POST",
+          url: "https://thrdc.bluefindigital.co.tz/getaprovedpublicarions.php",
+          data: JSON.stringify(body),
+          dataType: "json",
+          success: function (response) {
+              var res = response.approved_publications;
+              html = "";
+              $.each(res, function(index, value) {
+                  html += '<div class="col-lg-3 col-md-3 d-flex align-items-stretch video" data-aos="zoom-in" data-aos-delay="100">\
+                    <div class="icon-box iconbox-blue">\
+                      <a href="event-details.html"><img src="assets/img/portfolio/miaka10aniver.PNG" class="img-fluid" alt=""></a>\
+                      <p class="video-date">' + value.date_published + '<p>\
+                      <p class="video-title">' + value.title + '</p>\
+                    </div>\
+                  </div>';
+              });
+            
+              $('#events-data').empty('').append(html);
+              console.log(html);
+            
+
+          },
+          error: function (response) {
+              alert(response.responseText);
+          }
+      });
+    });
+    
+  </script>
 
 </body>
 
