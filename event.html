@@ -138,9 +138,9 @@
        <section id="about-us" class="about-us section-bg">
         <div class="container" data-aos="fade-up">
   
-          <div class="row" id="events-data">
-          </div>
+          <div class="row" id="events-data"></div>
           <!-- Video section -->
+
       </section><!-- End Video and About Us Section -->
 
       
@@ -301,15 +301,15 @@
               html = "";
               $.each(res, function(index, value) {
                   html += '<div id="event-more" class="col-lg-3 col-md-3 d-flex align-items-stretch video" data-aos="zoom-in" data-aos-delay="100">\
-                    <div class="icon-box iconbox-blue">\
+                    <div id="try" class="icon-box iconbox-blue">\
                       <a href="#"><img src="' + value.image_front + '" class="img-fluid" alt=""></a>\
                       <p class="video-date">' + value.date_published + '<p>\
-                      <p class="video-title">' + value.title + '</p>\
+                      <p id="v-title" class="video-title">' + value.title + '</p>\
                     </div>\
                   </div>';
-
               });
               $('#events-data').empty('').append(html);
+
           },
           error: function (response) {
               alert(response.responseText);
@@ -317,11 +317,11 @@
       });
     });
 
-
-    $('#event-more').on('click', function() {
-      console.log("onclicek enven");
+   $(document).on("click", "#try" , function() {
+       var title = $(this).text()
+       console.log(title)
     });
-    
+
   </script>
 
 </body>
