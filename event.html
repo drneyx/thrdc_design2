@@ -300,24 +300,26 @@
               var res = response.approved_publications;
               html = "";
               $.each(res, function(index, value) {
-                  html += '<div class="col-lg-3 col-md-3 d-flex align-items-stretch video" data-aos="zoom-in" data-aos-delay="100">\
+                  html += '<div id="event-more" class="col-lg-3 col-md-3 d-flex align-items-stretch video" data-aos="zoom-in" data-aos-delay="100">\
                     <div class="icon-box iconbox-blue">\
-                      <a href="event-details.html"><img src="' + value.image_front + '" class="img-fluid" alt=""></a>\
+                      <a href="#"><img src="' + value.image_front + '" class="img-fluid" alt=""></a>\
                       <p class="video-date">' + value.date_published + '<p>\
                       <p class="video-title">' + value.title + '</p>\
                     </div>\
                   </div>';
-              });
-            
-              $('#events-data').empty('').append(html);
-              console.log(html);
-            
 
+              });
+              $('#events-data').empty('').append(html);
           },
           error: function (response) {
               alert(response.responseText);
           }
       });
+    });
+
+
+    $('#event-more').on('click', function() {
+      console.log("onclicek enven");
     });
     
   </script>
