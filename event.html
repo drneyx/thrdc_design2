@@ -307,7 +307,7 @@
               html = "";
               $.each(res, function(index, value) {
                   html += '<div id="event-more" class="col-lg-3 col-md-3 d-flex align-items-stretch video" data-aos="zoom-in" data-aos-delay="100">\
-                    <div id="try" class="icon-box iconbox-blue">\
+                    <div id="event-single-data" class="icon-box iconbox-blue">\
                       <a href="#" class="test-img" ><img id="img" src="' + value.image_front + '" class="img-fluid" alt=""></a>\
                       <p class="video-date">' + value.date_published + '<p>\
                       <p id="v-title" class="video-title">' + value.title + '</p>\
@@ -326,7 +326,7 @@
 
   
 
-   $(document).on("click", "#try" , function() {
+   $(document).on("click", "#event-single-data" , function() {
 
        var title = $(this).find('.video-title').text();
        var date_published = $(this).find('.video-date').text();
@@ -335,11 +335,10 @@
       
        $("#event-detail").removeClass("event-detail");
        $("#about-us").addClass("event-detail");
+       
        $("#events").addClass("hide");
        $("#events-det").removeClass("hide");
        $("#events-deta").removeClass("hide");
-
-
 
        html = "";
        html += `<div id="top-event-area" class="d-flex align-items-end flex-row bd-highlight">
