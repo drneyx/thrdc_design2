@@ -141,6 +141,31 @@
   <!-- ======= Our Clients Section ======= -->
   <section class="members">
     <div class="container"  data-aos="fade-up">
+      <form class="">
+          <div class="row g-3 align-items-center">
+            <div class="col-md-3 d-flex align-items-center justify-content-center">
+              <span id="passwordHelpInline" class="form-text">
+                Search filters:
+              </span>
+            </div>
+            <div class="col-md-3">
+              <select class="form-select" id="zone_list" aria-label="Default select example">
+              </select>
+            </div>
+            <div class="col-md-3">
+              <select class="form-select" aria-label="Default select example">
+                <option selected>Open this select menu</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+            <button type="submit" class="btn btn-primary w-100">search</button>
+            </div>
+          </form>
+        
+      </div>
 
       <table id="datatable" class="table table-striped members-table" style="width:100%">
         <thead class="members-head">
@@ -331,6 +356,13 @@
                       { data: 'zone_name' },  
                   ]
               });
+
+
+              options = "";
+              $.each(res, function(index, value){
+                 options += '<option value="' + value.zone_name + '">'+ value.zone_name + '</option>';
+              });
+              $('#zone_list').empty('').append(options);
 
           },
           error: function (response) {
