@@ -141,7 +141,24 @@
   <!-- ======= Our Clients Section ======= -->
   <section class="members">
     <div class="container"  data-aos="fade-up">
+          <div class="row g-3 align-items-center">
+            <div class="col-md-4 d-flex align-items-center justify-content-center">
+              <span id="passwordHelpInline" class="form-text">
+                Search filters:
+              </span>
+            </div>
+            <div class="col-md-4">
+              <select class="form-select" id="zone_list" aria-label="Default select example">
+              </select>
+            </div>
+            <div class="col-md-4">
+              <select class="form-select"  id="zone_id" aria-label="Default select example">
+              </select>
+            </div>
+            
+      </div>
 
+  
       <table id="datatable" class="table table-striped members-table" style="width:100%">
         <thead class="members-head">
             <tr>
@@ -312,8 +329,9 @@
     };
     var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
     }
-    
+
     $(document).ready(function () {
+
       var body = {
         "api_key":"YTc4YWY3ZWVlZWViODU3YTY5ODUzNTA4ZGU3YzVhYzM1NTdjNjM1MWEyYzA1ODU1ZDhlqA12AjkP0qNTc4ZjU3N2QwMDVmMw=="
       }
@@ -324,13 +342,37 @@
           dataType: "json",
           success: function (response) {
               var res = response.zones;
-              $('#datatable').DataTable({
+              var datatable = $('#datatable').DataTable({
                   data: res,
                   columns: [
                       { data: 'zone_id' },
                       { data: 'zone_name' },  
                   ]
+                 
               });
+              zone_name = "";
+              zone_name += '<option value="">' + '------' + '</option>';
+
+              zone_id = ""
+              zone_id += '<option value="">' + '------' + '</option>';
+
+              $.each(res, function(index, value){
+                 zone_name += '<option value="' + value.zone_name + '">'+ value.zone_name + '</option>';
+                 zone_id += '<option value="' + value.zone_id + '">'+ value.zone_id + '</option>';
+              });
+
+              $('#zone_list').empty('').append(zone_name);
+              $('#zone_id').empty('').append(zone_id);
+
+              $('#zone_list').on('change', function(e){
+                var zone_value = $(this).val();
+                datatable.search(zone_value).draw(); 
+              })
+
+              $('#zone_id').on('change', function(e){
+                var zone_value = $(this).val();
+                datatable.search(zone_value).draw(); 
+              })
 
           },
           error: function (response) {
@@ -338,8 +380,8 @@
           }
       });
     });
-    
-   
+
+ 
 </script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAChJNvE8x9PwAl3-TozmGp1mDCy9anvjI&callback=myMap"></script>
