@@ -456,34 +456,7 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Our Partners</h2>
-         
-          <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Launch demo modal
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-        
-          
+          <h2>Our Partners</h2>      
         </div>
 
         <div class="row no-gutters clients-wrap clearfix" data-aos="fade-up">
@@ -569,6 +542,29 @@
 
         </div>
       </section><!-- End Subscribe Section -->
+
+
+      <!-- Modal -->
+      <div class="modal fade" id="subscribeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Get Our Exclusive Updates</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form class="form-inline row">
+                <div class="form-group col-md-7">
+                  <input type="text"  class="form-control subscribe-input border" id="inputPassword2" placeholder="Enter your email">
+                </div>
+                <button type="submit" class="subscribe-button col-md-5">Subscribe</button>
+              </form>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+
 
       <!-- =======Google map Section ======= -->
       <div id="wrapper">
@@ -699,7 +695,7 @@
     $(document).ready(function () {
 
       $('#subscribeModal').appendTo("body") 
-      $('#exampleModal').modal('show');
+      $('#subscribeModal').modal('show');
 
       // Define the menu we are working with
       var menu = $('.navbar');
