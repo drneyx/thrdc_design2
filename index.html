@@ -182,6 +182,9 @@
   <main id="main">
 
       <!-- ======= Word from chair  Section ======= -->
+
+
+      
       <section id="word" class="about-us">
         <div class="container" data-aos="fade-up">  
          <div class="container">
@@ -231,6 +234,8 @@
     <!-- ======= Video  Section ======= -->
     <section id="about-us" class="about-us section-bg">
       <div class="container" data-aos="fade-up">
+
+        
 
         <div class="row">
            <!-- Render for loop here -->
@@ -359,6 +364,8 @@
         <div class="section-title">
           <h2>Current News</h2>
           <p>Check out what our happy community say about us.</p>
+
+          
         </div>
 
         <div class="row m-3">
@@ -449,7 +456,7 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Our Partners</h2>
+          <h2>Our Partners</h2>      
         </div>
 
         <div class="row no-gutters clients-wrap clearfix" data-aos="fade-up">
@@ -535,6 +542,28 @@
 
         </div>
       </section><!-- End Subscribe Section -->
+
+
+      <!-- Modal -->
+      <div class="modal fade" id="subscribeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Get Our Exclusive Updates</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form class="form-inline row mt-4 mb-4">
+                <div class="form-group col-md-7">
+                  <input type="text"  class="form-control subscribe-input border" id="inputPassword2" placeholder="Enter your email">
+                </div>
+                <button type="submit" class="subscribe-button col-md-5">Subscribe</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
 
       <!-- =======Google map Section ======= -->
       <div id="wrapper">
@@ -645,6 +674,7 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
@@ -662,6 +692,9 @@
     * Scroll management
     */
     $(document).ready(function () {
+
+      $('#subscribeModal').appendTo("body") 
+      $('#subscribeModal').modal('show');
 
       // Define the menu we are working with
       var menu = $('.navbar');
